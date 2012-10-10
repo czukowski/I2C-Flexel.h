@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Atmel Studio Solution File, Format Version 11.00
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "I2CFlexel", "I2CFlexel\I2CFlexel.cppproj", "{BE059A59-444C-4F13-9DC1-87E363F7D834}"
 EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Tests", "Tests\Tests.cppproj", "{EB1ACA94-B81F-4ED9-8042-15E72EE344B0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|AVR = Debug|AVR
@@ -13,6 +15,10 @@ Global
 		{BE059A59-444C-4F13-9DC1-87E363F7D834}.Debug|AVR.Build.0 = Debug|AVR
 		{BE059A59-444C-4F13-9DC1-87E363F7D834}.Release|AVR.ActiveCfg = Release|AVR
 		{BE059A59-444C-4F13-9DC1-87E363F7D834}.Release|AVR.Build.0 = Release|AVR
+		{EB1ACA94-B81F-4ED9-8042-15E72EE344B0}.Debug|AVR.ActiveCfg = Debug|AVR
+		{EB1ACA94-B81F-4ED9-8042-15E72EE344B0}.Debug|AVR.Build.0 = Debug|AVR
+		{EB1ACA94-B81F-4ED9-8042-15E72EE344B0}.Release|AVR.ActiveCfg = Release|AVR
+		{EB1ACA94-B81F-4ED9-8042-15E72EE344B0}.Release|AVR.Build.0 = Release|AVR
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
