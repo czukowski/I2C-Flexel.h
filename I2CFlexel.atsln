@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "I2CFlexel", "I2CFlexel\I2CFlexel.cppproj", "{BE059A59-444C-4F13-9DC1-87E363F7D834}"
 EndProject
 Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "Tests", "Tests\Tests.cppproj", "{EB1ACA94-B81F-4ED9-8042-15E72EE344B0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BE059A59-444C-4F13-9DC1-87E363F7D834} = {BE059A59-444C-4F13-9DC1-87E363F7D834}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
