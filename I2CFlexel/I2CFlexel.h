@@ -14,7 +14,7 @@
 #ifndef I2CFLEXEL_H_
 #define I2CFLEXEL_H_
 
-#include <Wire/IWire.h>
+#include <IWire.h>
 
 // I2C-Flexel board address and command prefix
 #define I2C_FLEXEL_ADDRESS 0x48

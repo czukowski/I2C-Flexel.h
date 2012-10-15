@@ -52,6 +52,8 @@
   <avrgcc.compiler.directories.IncludePaths><ListValues>
   <Value>c:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino</Value>
   <Value>c:\Program Files (x86)\Arduino\hardware\arduino\variants\standard</Value>
+  <Value>../../../Wire/Wire</Value>
+  <Value>../../../Wire/MockWire</Value>
   <Value>../../../Wire</Value>
 </ListValues></avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -66,6 +68,7 @@
   <avrgcccpp.compiler.directories.IncludePaths><ListValues>
   <Value>c:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino</Value>
   <Value>c:\Program Files (x86)\Arduino\hardware\arduino\variants\standard</Value>
+  <Value>../../../Wire/Wire</Value>
   <Value>../../../Wire</Value>
 </ListValues></avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
@@ -98,6 +101,8 @@
   <avrgcc.compiler.directories.IncludePaths><ListValues>
   <Value>c:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino</Value>
   <Value>c:\Program Files (x86)\Arduino\hardware\arduino\variants\standard</Value>
+  <Value>../../../Wire/Wire</Value>
+  <Value>../../../Wire/MockWire</Value>
   <Value>../../../Wire</Value>
 </ListValues></avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
@@ -112,6 +117,7 @@
   <avrgcccpp.compiler.directories.IncludePaths><ListValues>
   <Value>c:\Program Files (x86)\Arduino\hardware\arduino\cores\arduino</Value>
   <Value>c:\Program Files (x86)\Arduino\hardware\arduino\variants\standard</Value>
+  <Value>../../../Wire/Wire</Value>
   <Value>../../../Wire</Value>
 </ListValues></avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize for size (-Os)</avrgcccpp.compiler.optimization.level>
