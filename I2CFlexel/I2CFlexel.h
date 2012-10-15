@@ -14,6 +14,7 @@
 #ifndef I2CFLEXEL_H_
 #define I2CFLEXEL_H_
 
+#include <Arduino.h>
 #include <IWire.h>
 
 // I2C-Flexel board address and command prefix
@@ -66,8 +67,12 @@ namespace I2CFlexel
 			/**
 			 * Constructor and destructor
 			 */
-			I2CFlexel(IWire & wire) : connector(wire) {};
+			I2CFlexel() {};
 			virtual ~I2CFlexel() {};
+			/**
+			 * Wire dependency setter
+			 */
+			void setWire(IWire& wire);
 			/**
 			 * Begins a command transmission
 			 */
@@ -101,7 +106,7 @@ namespace I2CFlexel
 			 */
 			void readBytes(byte* arr, uint8_t size);
 		private:
-			IWire & connector;
+			IWire* connector;
 	};
 }
 
