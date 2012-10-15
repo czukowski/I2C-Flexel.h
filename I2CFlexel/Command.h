@@ -12,6 +12,8 @@
 #ifndef I2C_FLEXEL_COMMAND_H_
 #define I2C_FLEXEL_COMMAND_H_
 
+#include <Arduino.h>
+
 namespace I2CFlexel
 {
 	enum HighPowerPin {HIGHPOWER1 = 1, HIGHPOWER2 = 2, HIGHPOWER3 = 3, HIGHPOWER4 = 4};
@@ -30,11 +32,6 @@ namespace I2CFlexel
 		 * Public class methods
 		 */
 		public:
-			/**
-			 * Constructor and destructor
-			 */
-			Command(IWire & wire) : I2CFlexel(wire) {};
-			virtual ~Command() {};
 			/**
 			 * Returns data byte with firmware version number.
 			 */

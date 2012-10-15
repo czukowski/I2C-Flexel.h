@@ -12,6 +12,8 @@
 #ifndef I2CFLEXEL_LCD_H_
 #define I2CFLEXEL_LCD_H_
 
+#include <Arduino.h>
+
 #define I2C_FLEXEL_LCD_MAX_ROWS_COUNT 4
 #define I2C_FLEXEL_LCD_MAX_COLS_COUNT 20
 #define I2C_FLEXEL_LCD_CHAR_ROWS_COUNT 8

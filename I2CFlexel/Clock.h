@@ -13,6 +13,8 @@
 #ifndef I2C_FLEXEL_CLOCK_H_
 #define I2C_FLEXEL_CLOCK_H_
 
+#include <Arduino.h>
+
 namespace I2CFlexel
 {
 	/**
@@ -38,11 +40,6 @@ namespace I2CFlexel
 		 * Public class methods
 		 */
 		public:
-			/**
-			 * Constructor and destructor
-			 */
-			Clock(IWire & wire) : I2CFlexel(wire) {};
-			virtual ~Clock() {};
 			/**
 			 * Returns DateTime structure with the current time
 			 */

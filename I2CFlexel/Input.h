@@ -12,6 +12,8 @@
 #ifndef I2C_FLEXEL_INPUT_H_
 #define I2C_FLEXEL_INPUT_H_
 
+#include <Arduino.h>
+
 namespace I2CFlexel
 {
 	enum KeypadMode {KEYPAD_4X4 = 0x00, KEYPAD_8 = 0x01, KEYPAD_PS2 = 0x02};
@@ -22,11 +24,6 @@ namespace I2CFlexel
 		 * Public class methods
 		 */
 		public:
-			/**
-			 * Constructor and destructor
-			 */
-			Input(IWire & wire) : I2CFlexel(wire) {};
-			virtual ~Input() {};
 			/**
 			 * Calls the `setKeypadMode` method with the converted argument set
 			 */
