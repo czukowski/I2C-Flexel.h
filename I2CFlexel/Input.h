@@ -18,7 +18,7 @@ namespace I2CFlexel
 {
 	enum KeypadMode {KEYPAD_4X4 = 0x00, KEYPAD_8 = 0x01, KEYPAD_PS2 = 0x02};
 
-	class Input : protected I2CFlexel
+	class Input : public I2CFlexel
 	{
 		/**
 		 * Public class methods

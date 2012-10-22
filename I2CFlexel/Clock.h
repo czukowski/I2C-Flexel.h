@@ -34,7 +34,7 @@ namespace I2CFlexel
 		byte year;
 	};
 
-	class Clock : protected I2CFlexel
+	class Clock : public I2CFlexel
 	{
 		/**
 		 * Public class methods

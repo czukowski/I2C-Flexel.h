@@ -26,7 +26,7 @@ namespace I2CFlexel
 	 */
 	const byte buzzerMsPerCount = 5;
 
-	class Command : protected I2CFlexel
+	class Command : public I2CFlexel
 	{
 		/**
 		 * Public class methods
