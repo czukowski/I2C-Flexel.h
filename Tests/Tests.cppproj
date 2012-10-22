@@ -171,7 +171,7 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Asserts.h">
+    <Compile Include="ClockTest.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="I2CFlexelTest.h">

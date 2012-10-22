@@ -12,7 +12,6 @@
 #include <ArduinoUnit.h>
 #include <I2CFlexel.h>
 #include <MockWire.h>
-#include "Asserts.h"
 
 test(beginCommandTest)
 {

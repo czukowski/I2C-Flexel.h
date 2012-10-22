@@ -20,7 +20,7 @@ namespace I2CFlexel
 		public:
 			MockWire wire;
 			I2CFlexel object;
-			I2CFlexelSuite() : TestSuite("I2C Flexel tests") {};
+			I2CFlexelSuite() : TestSuite("I2C Flexel tests") {}
 			void setUp()
 			{
 				wire = MockWire();
@@ -29,4 +29,5 @@ namespace I2CFlexel
 			}
 	};
 }
+
 #endif /* I2CFLEXEL_TESTSUITES_H_ */
