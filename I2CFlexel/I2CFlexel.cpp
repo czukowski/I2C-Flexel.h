@@ -59,9 +59,11 @@ namespace I2CFlexel
 
 	void I2CFlexel::readBytes(byte* arr, uint8_t size)
 	{
-		for (uint8_t i = 0; i < size; i++)
+		byte *p = arr;
+		for (int i = 0; i < size; i++)
 		{
-			arr[i] = readByte();
+			*p++ = readByte();
 		}
+		*p = 0;
 	}
 }
