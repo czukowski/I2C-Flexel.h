@@ -177,10 +177,10 @@
     <Compile Include="I2CFlexelTest.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="AllTests.cpp">
+    <Compile Include="Tests.cpp">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="TestSuites.h">
+    <Compile Include="Tests.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
