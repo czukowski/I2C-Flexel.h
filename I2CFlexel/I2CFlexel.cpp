@@ -55,7 +55,7 @@ namespace I2CFlexel
 
 	byte I2CFlexel::readByte()
 	{
-		return connector->read();
+		return (byte) connector->read();
 	}
 
 	void I2CFlexel::readBytes(byte* arr, uint8_t size)
@@ -110,8 +110,8 @@ namespace I2CFlexel
 		byte timeAndDate[7];
 		getTimeAndDate(timeAndDate);
 		return DateTime(
-		bcdToDec(timeAndDate[0]), bcdToDec(timeAndDate[1]), bcdToDec(timeAndDate[2]), bcdToDec(timeAndDate[3]),
-		bcdToDec(timeAndDate[4]), bcdToDec(timeAndDate[5]), bcdToDec(timeAndDate[6])
+			bcdToDec(timeAndDate[0]), bcdToDec(timeAndDate[1]), bcdToDec(timeAndDate[2]), bcdToDec(timeAndDate[3]),
+			bcdToDec(timeAndDate[4]), bcdToDec(timeAndDate[5]), bcdToDec(timeAndDate[6])
 		);
 	}
 
@@ -123,7 +123,7 @@ namespace I2CFlexel
 		sendCommandParameter(hour);
 		endCommand();
 	}
-	void I2CFlexel::setTime(DateTime time)
+	void I2CFlexel::setTime(const DateTime &time)
 	{
 		setTime(decToBcd(time.seconds), decToBcd(time.minutes), decToBcd(time.hours));
 	}
@@ -137,7 +137,7 @@ namespace I2CFlexel
 		sendCommandParameter(year);
 		endCommand();
 	}
-	void I2CFlexel::setDate(DateTime date)
+	void I2CFlexel::setDate(const DateTime &date)
 	{
 		setDate(decToBcd(date.weekDay), decToBcd(date.day), decToBcd(date.month), decToBcd(date.year));
 	}
@@ -154,11 +154,11 @@ namespace I2CFlexel
 		sendCommandParameter(year);
 		endCommand();
 	}
-	void I2CFlexel::setTimeAndDate(DateTime timeAndDate)
+	void I2CFlexel::setTimeAndDate(const DateTime &timeAndDate)
 	{
 		setTimeAndDate(
-		decToBcd(timeAndDate.seconds), decToBcd(timeAndDate.minutes), decToBcd(timeAndDate.hours), decToBcd(timeAndDate.weekDay),
-		decToBcd(timeAndDate.day), decToBcd(timeAndDate.month), decToBcd(timeAndDate.year)
+			decToBcd(timeAndDate.seconds), decToBcd(timeAndDate.minutes), decToBcd(timeAndDate.hours), decToBcd(timeAndDate.weekDay),
+			decToBcd(timeAndDate.day), decToBcd(timeAndDate.month), decToBcd(timeAndDate.year)
 		);
 	}
 
@@ -172,7 +172,7 @@ namespace I2CFlexel
 		return readByte();
 	}
 
-	void I2CFlexel::setHighPowerPin(HighPowerPin pin)
+	void I2CFlexel::setHighPowerPin(const HighPowerPin &pin)
 	{
 		setHighPowerPin( (byte) pin);
 	}
@@ -183,7 +183,7 @@ namespace I2CFlexel
 		endCommand();
 	}
 
-	void I2CFlexel::clearHighPowerPin(HighPowerPin pin)
+	void I2CFlexel::clearHighPowerPin(const HighPowerPin &pin)
 	{
 		clearHighPowerPin( (byte) pin);
 	}
@@ -194,7 +194,7 @@ namespace I2CFlexel
 		endCommand();
 	}
 
-	void I2CFlexel::setPwmForHighPowerPin(HighPowerPin pin, byte pwmValue)
+	void I2CFlexel::setPwmForHighPowerPin(const HighPowerPin &pin, byte pwmValue)
 	{
 		setPwmForHighPowerPin( (byte) pin, pwmValue);
 	}
@@ -205,7 +205,7 @@ namespace I2CFlexel
 		endCommand();
 	}
 
-	void I2CFlexel::setServoMotorPosition(ServoPin pin, byte msb, byte lsb)
+	void I2CFlexel::setServoMotorPosition(const ServoPin &pin, byte msb, byte lsb)
 	{
 		// TODO: improve this
 		setServoMotorPosition( (byte) pin, msb, lsb);
@@ -219,7 +219,7 @@ namespace I2CFlexel
 		endCommand();
 	}
 
-	void I2CFlexel::setPwmForDcMotor(DcMotor motor, MotorDirection direction, byte pwmValue)
+	void I2CFlexel::setPwmForDcMotor(const DcMotor &motor, const MotorDirection &direction, byte pwmValue)
 	{
 		setPwmForDcMotor(( (byte) (motor << 2) + (byte) direction), pwmValue);
 	}
@@ -231,7 +231,7 @@ namespace I2CFlexel
 		endCommand();
 	}
 
-	uint16_t I2CFlexel::getAnalogInputValue(AnalogInputPin pin)
+	uint16_t I2CFlexel::getAnalogInputValue(const AnalogInputPin &pin)
 	{
 		byte analog[2];
 		getAnalogInputValue( (byte) pin, analog);
@@ -259,7 +259,7 @@ namespace I2CFlexel
 
 	// Input functions
 
-	void I2CFlexel::setKeypadMode(KeypadMode mode)
+	void I2CFlexel::setKeypadMode(const KeypadMode &mode)
 	{
 		setKeypadMode(mode);
 		keypadMode = mode;

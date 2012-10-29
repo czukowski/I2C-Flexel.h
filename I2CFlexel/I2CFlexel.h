@@ -79,15 +79,15 @@ namespace I2CFlexel
 			/**
 			 * Sets time from the provided DateTime struct
 			 */
-			void setTime(DateTime time);
+			void setTime(const DateTime &time);
 			/**
 			 * Sets date from the provided DateTime struct
 			 */
-			void setDate(DateTime date);
+			void setDate(const DateTime &date);
 			/**
 			 * Sets time and date from the provided DateTime struct
 			 */
-			void setTimeAndDate(DateTime dateTime);
+			void setTimeAndDate(const DateTime &dateTime);
 			/**
 			 * Returns data byte with firmware version number.
 			 */
@@ -95,27 +95,27 @@ namespace I2CFlexel
 			/**
 			 * Calls the `setHighPowerPin` method with the converted argument set
 			 */
-			void setHighPowerPin(HighPowerPin pin);
+			void setHighPowerPin(const HighPowerPin &pin);
 			/**
 			 * Calls the `clearHighPowerPin` method with the converted argument set
 			 */
-			void clearHighPowerPin(HighPowerPin pin);
+			void clearHighPowerPin(const HighPowerPin &pin);
 			/**
 			 * Calls the `setPwmForHighPowerPin` method with the converted argument set
 			 */
-			void setPwmForHighPowerPin(HighPowerPin pin, byte pwmValue);
+			void setPwmForHighPowerPin(const HighPowerPin &pin, byte pwmValue);
 			/**
 			 * Calls the `setServoMotorPosition` method with the converted argument set
 			 */
-			void setServoMotorPosition(ServoPin pin, byte msb, byte lsb);
+			void setServoMotorPosition(const ServoPin &pin, byte msb, byte lsb);
 			/**
 			 * Calls the `setPwmForDcMotor` method with the converted argument set
 			 */
-			void setPwmForDcMotor(DcMotor motor, MotorDirection direction, byte pwmValue);
+			void setPwmForDcMotor(const DcMotor &motor, const MotorDirection &direction, byte pwmValue);
 			/**
 			 * Calls the `getAnalogInputValue` method with the converted argument set
 			 */
-			uint16_t getAnalogInputValue(AnalogInputPin pin);
+			uint16_t getAnalogInputValue(const AnalogInputPin &pin);
 			/**
 			 * Calls the `setBuzzerTime` method with the converted argument set
 			 */
@@ -123,7 +123,7 @@ namespace I2CFlexel
 			/**
 			 * Calls the `setKeypadMode` method with the converted argument set
 			 */
-			void setKeypadMode(KeypadMode mode);
+			void setKeypadMode(const KeypadMode &mode);
 			/**
 			 * Sends command to read Keypad, Buttons or PS2 keypad depending on the current keypad mode.
 			 */
