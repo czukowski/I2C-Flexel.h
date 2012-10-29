@@ -82,9 +82,6 @@ namespace I2CFlexel
 	 */
 	struct DateTime
 	{
-		DateTime(byte sec, byte min, byte hour) : seconds(sec), minutes(min), hours(hours) {};
-		DateTime(byte wday, byte day, byte month, byte year) : weekDay(wday), day(day), month(month), year(year) {};
-		DateTime(byte sec, byte min, byte hour, byte wday, byte day, byte month, byte year) : seconds(sec), minutes(min), hours(hours), weekDay(wday), day(day), month(month), year(year) {};
 		byte seconds;
 		byte minutes;
 		byte hours;
@@ -92,6 +89,32 @@ namespace I2CFlexel
 		byte day;
 		byte month;
 		byte year;
+		DateTime(byte sec, byte min, byte hour)
+		{
+			setTime(sec, min, hour);
+		};
+		DateTime(byte wday, byte day, byte month, byte year)
+		{
+			setDate(wday, day, month, year);
+		};
+		DateTime(byte sec, byte min, byte hour, byte wday, byte day, byte month, byte year)
+		{
+			setTime(sec, min, hour);
+			setDate(wday, day, month, year);
+		};
+		void setDate(byte wday_, byte day_, byte month_, byte year_)
+		{
+			weekDay = wday_;
+			day = day_;
+			month = month_;
+			year = year_;
+		};
+		void setTime(byte sec, byte min, byte hour)
+		{
+			seconds = sec;
+			minutes = min;
+			hours = hour;
+		};
 	};
 }
 
