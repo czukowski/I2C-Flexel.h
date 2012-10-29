@@ -201,6 +201,7 @@ namespace I2CFlexel
 	void I2CFlexel::setPwmForHighPowerPin(byte pin, byte pwmValue)
 	{
 		beginCommand(I2C_FLEXEL_COMMAND_SET_PWM_FOR_HIGH_POWER_PIN);
+		sendCommandParameter(pin);
 		sendCommandParameter(pwmValue);
 		endCommand();
 	}
