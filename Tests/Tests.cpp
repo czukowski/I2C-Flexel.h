@@ -14,7 +14,12 @@
 using namespace I2CFlexel;
 
 I2CFlexelSuite i2cFlexelSuite;
-#include "I2CFlexelTest.h"
+
+// Uncomment tests you want to run; all of them won't fit into 2k of RAM
+
+//#include "I2CFlexelTest.h"
+//#include "ClockTest.h"
+#include "CommandTest.h"
 
 int main(int argc, const char* argv[])
 {
