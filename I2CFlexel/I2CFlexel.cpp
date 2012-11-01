@@ -206,9 +206,10 @@ namespace I2CFlexel
 		endCommand();
 	}
 
-	void I2CFlexel::setServoMotorPosition(const ServoPin &pin, byte msb, byte lsb)
+	void I2CFlexel::setServoMotorPosition(const ServoPin &pin, uint16_t position)
 	{
-		// TODO: improve this
+		byte msb = position / 256;
+		byte lsb = position - msb * 256;
 		setServoMotorPosition( (byte) pin, msb, lsb);
 	}
 	void I2CFlexel::setServoMotorPosition(byte pin, byte msb, byte lsb)
@@ -222,7 +223,8 @@ namespace I2CFlexel
 
 	void I2CFlexel::setPwmForDcMotor(const DcMotor &motor, const MotorDirection &direction, byte pwmValue)
 	{
-		setPwmForDcMotor(( (byte) (motor << 2) + (byte) direction), pwmValue);
+		byte motorAndPosition = (( (byte) motor << 1) + (byte) direction);
+		setPwmForDcMotor(motorAndPosition, pwmValue);
 	}
 	void I2CFlexel::setPwmForDcMotor(byte motorAndPosition, byte pwmValue)
 	{

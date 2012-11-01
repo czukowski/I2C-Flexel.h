@@ -107,7 +107,7 @@ namespace I2CFlexel
 			/**
 			 * Calls the `setServoMotorPosition` method with the converted argument set
 			 */
-			void setServoMotorPosition(const ServoPin &pin, byte msb, byte lsb);
+			void setServoMotorPosition(const ServoPin &pin, uint16_t position);
 			/**
 			 * Calls the `setPwmForDcMotor` method with the converted argument set
 			 */
