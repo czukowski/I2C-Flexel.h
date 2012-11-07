@@ -20,6 +20,8 @@ I2CFlexelSuite i2cFlexelSuite;
 //#include "I2CFlexelTest.h"
 //#include "ClockTest.h"
 #include "CommandTest.h"
+#include "OutputTest.h"
+//#include "InputTest.h"
 
 int main(int argc, const char* argv[])
 {
