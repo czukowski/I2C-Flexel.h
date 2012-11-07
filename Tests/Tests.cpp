@@ -22,11 +22,11 @@ I2CFlexelSuite i2cFlexelSuite;
 // Test date and time related commands
 //#include "ClockTest.h"
 // Test misc I2C-Flexel commands
-#include "CommandTest.h"
+//#include "CommandTest.h"
 // Test set output pins and motor commands
-#include "OutputTest.h"
+//#include "OutputTest.h"
 // Test keypad commands
-//#include "KeypadTest.h"
+#include "KeypadTest.h"
 
 int main(int argc, const char* argv[])
 {

@@ -178,7 +178,7 @@
     <Compile Include="I2CFlexelTest.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="InputTest.h">
+    <Compile Include="KeypadTest.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="OutputTest.h">
