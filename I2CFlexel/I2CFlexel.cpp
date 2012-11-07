@@ -266,7 +266,7 @@ namespace I2CFlexel
 	void I2CFlexel::setKeypadMode(const KeypadMode &mode)
 	{
 		setKeypadMode( (byte) mode);
-		keypadMode = mode;
+		keypadMode = (byte) mode + I2C_FLEXEL_READ_KEY_BASE;
 	}
 	void I2CFlexel::setKeypadMode(byte mode)
 	{
@@ -299,7 +299,7 @@ namespace I2CFlexel
 	}
 	byte I2CFlexel::readKey()
 	{
-		return readKey(readKeypadCommandBase + keypadMode);
+		return readKey(keypadMode);
 	}
 
 	// LCD functions

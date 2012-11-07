@@ -128,6 +128,27 @@ namespace I2CFlexel
 			 * Sends command to read Keypad, Buttons or PS2 keypad depending on the current keypad mode.
 			 */
 			byte readKey();
+			/**
+			 * Read the keypad. Module returns 1 data byte. If there is no key data in the keypad buffer,
+			 * 0 is returned. If there is key data, a key code from 0x01 to 0x10 is returned, depending on
+			 * what key was pressed.
+			 * Note: I2C-FLEXEL module provides 16 bytes FIFO buffer.
+			 */
+			byte readKeypad();
+			/**
+			 * Read the keypad port. Module returns 1 data byte. If there is no data in the keypad buffer,
+			 * 0 is returned. If there is data, a button code from 0x01 to 0x08 is returned, depending on
+			 * what button was pressed.
+			 * Note: I2C-FLEXEL module provides 16 bytes FIFO buffer.
+			 */
+			byte readButtons();
+			/**
+			 * Read the keypad. Module returns 1 data bytes. If there is no key data in the keypad buffer,
+			 * 0 is returned. If there is key data, a key code from 0x01 to 0x10 is returned, depending on
+			 * what key was pressed.
+			 * Note: I2C-FLEXEL module provides 16 bytes FIFO buffer.
+			 */
+			byte readPS2Keypad();
 			//byte readRemoteControl();
 			/**
 			 * This command sets the backlight value (0 – 250), the single byte parameter select the
@@ -341,27 +362,6 @@ namespace I2CFlexel
 			 * Data byte = 0x02 - keyboard with PS2 interface.
 			 */
 			void setKeypadMode(byte mode);
-			/**
-			 * Read the keypad. Module returns 1 data byte. If there is no key data in the keypad buffer,
-			 * 0 is returned. If there is key data, a key code from 0x01 to 0x10 is returned, depending on
-			 * what key was pressed.
-			 * Note: I2C-FLEXEL module provides 16 bytes FIFO buffer.
-			 */
-			byte readKeypad();
-			/**
-			 * Read the keypad port. Module returns 1 data byte. If there is no data in the keypad buffer,
-			 * 0 is returned. If there is data, a button code from 0x01 to 0x08 is returned, depending on
-			 * what button was pressed.
-			 * Note: I2C-FLEXEL module provides 16 bytes FIFO buffer.
-			 */
-			byte readButtons();
-			/**
-			 * Read the keypad. Module returns 1 data bytes. If there is no key data in the keypad buffer,
-			 * 0 is returned. If there is key data, a key code from 0x01 to 0x10 is returned, depending on
-			 * what key was pressed.
-			 * Note: I2C-FLEXEL module provides 16 bytes FIFO buffer.
-			 */
-			byte readPS2Keypad();
 		/**
 		 * BCD conversion and some other helper functions are private methods
 		 */
