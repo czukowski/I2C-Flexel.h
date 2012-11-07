@@ -290,6 +290,11 @@ namespace I2CFlexel
 		return readKey(I2C_FLEXEL_COMMAND_READ_PS2_KEYPAD);
 	}
 
+	byte I2CFlexel::readRemoteControl()
+	{
+		return readKey(I2C_FLEXEL_COMMAND_READ_REMOTE_CONTROL);
+	}
+
 	byte I2CFlexel::readKey(byte command)
 	{
 		beginCommand(command);

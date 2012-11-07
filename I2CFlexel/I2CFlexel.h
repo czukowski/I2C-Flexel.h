@@ -149,7 +149,12 @@ namespace I2CFlexel
 			 * Note: I2C-FLEXEL module provides 16 bytes FIFO buffer.
 			 */
 			byte readPS2Keypad();
-			//byte readRemoteControl();
+			/**
+			 * Read the remote control. Module returns 1 data bytes. If there is no data in the buffer,
+			 * 0 is returned. If there is remote control data, a received code is returned.
+			 * Note: I2C-FLEXEL module provides 32 bytes FIFO buffer.
+			 */
+			byte readRemoteControl();
 			/**
 			 * This command sets the backlight value (0 – 250), the single byte parameter select the
 			 * desired brightness. The module modulates the backlight via a transistor. This allows to set
