@@ -5,8 +5,8 @@
  * Copyright:  (c) 2012 Korney Czukowski
  * License:    MIT License
  */
-#ifndef I2CFLEXEL_INPUTTEST_H_
-#define I2CFLEXEL_INPUTTEST_H_
+#ifndef I2CFLEXEL_KEYPADTEST_H_
+#define I2CFLEXEL_KEYPADTEST_H_
 
 test(setKeypadModeTest)
 {
@@ -75,4 +75,4 @@ test(readRemoteControlTest)
 	assertReadKey(0x15, expectedCommand, i2cFlexelSuite.object.readRemoteControl());
 }
 
-#endif /* I2CFLEXEL_INPUTTEST_H_ */
+#endif /* I2CFLEXEL_KEYPADTEST_H_ */
