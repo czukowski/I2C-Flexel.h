@@ -17,11 +17,16 @@ I2CFlexelSuite i2cFlexelSuite;
 
 // Uncomment tests you want to run; all of them won't fit into 2k of RAM
 
+// Test I2C-Flexel core methods
 //#include "I2CFlexelTest.h"
+// Test date and time related commands
 //#include "ClockTest.h"
+// Test misc I2C-Flexel commands
 #include "CommandTest.h"
+// Test set output pins and motor commands
 #include "OutputTest.h"
-//#include "InputTest.h"
+// Test keypad commands
+//#include "KeypadTest.h"
 
 int main(int argc, const char* argv[])
 {
