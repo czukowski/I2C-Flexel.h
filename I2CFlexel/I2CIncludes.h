@@ -66,7 +66,7 @@ namespace I2CFlexel
 	enum DcMotor {MOTOR1 = 0x00, MOTOR2 = 0x01};
 	enum MotorDirection {FORWARD = 0x00, REVERSE = 0x01};
 	enum AnalogInputPin {INPUT1 = 1, INPUT2 = 2, INPUT3 = 3, INPUT4 = 4};
-	enum KeypadMode {KEYPAD_4X4 = 0x00, KEYPAD_8 = 0x01, KEYPAD_PS2 = 0x02};
+	enum KeypadMode {KEYPAD_4X4 = 0, KEYPAD_8 = 1, KEYPAD_PS2 = 2};
 
 	/**
 	 * Base command address for keypad read

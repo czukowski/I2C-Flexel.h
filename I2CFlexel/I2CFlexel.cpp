@@ -264,7 +264,7 @@ namespace I2CFlexel
 
 	void I2CFlexel::setKeypadMode(const KeypadMode &mode)
 	{
-		setKeypadMode(mode);
+		setKeypadMode( (byte) mode);
 		keypadMode = mode;
 	}
 	void I2CFlexel::setKeypadMode(byte mode)
