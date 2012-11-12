@@ -391,6 +391,11 @@ namespace I2CFlexel
 		endCommand();
 	}
 
+	void I2CFlexel::printStringOnLcd(const char *str)
+	{
+		printStringOnLcd(str, strlen(str));
+	}
+
 	void I2CFlexel::printStringOnLcd(const char *str, uint8_t length)
 	{
 		beginCommand(I2C_FLEXEL_COMMAND_PRINT_STRING_ON_LCD);

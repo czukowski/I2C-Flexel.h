@@ -234,6 +234,11 @@ namespace I2CFlexel
 			 */
 			void clearLcdScreen();
 			/**
+			 * This command prints the string to the LCD at the present cursor position. The string length will
+			 * be calculated.
+			 */
+			void printStringOnLcd(const char* str);
+			/**
 			 * This command prints the string with the specified length to the LCD at the present
 			 * cursor position.
 			 */
