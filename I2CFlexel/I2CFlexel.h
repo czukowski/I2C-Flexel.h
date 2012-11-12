@@ -237,7 +237,7 @@ namespace I2CFlexel
 			 * This command prints the string with the specified length to the LCD at the present
 			 * cursor position.
 			 */
-			void printStringOnLcd(byte* str, uint8_t length);
+			void printStringOnLcd(const char* str, uint8_t length);
 			/**
 			 * LCD module has space for 8 custom characters. Each custom character is 5 pixels wide by 8 pixels high.
 			 * The `addr` parameter indicates which custom character is defining, and must have a value from 0 to 7.

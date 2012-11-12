@@ -391,15 +391,15 @@ namespace I2CFlexel
 		endCommand();
 	}
 
-	void I2CFlexel::printStringOnLcd(byte* str, uint8_t length)
+	void I2CFlexel::printStringOnLcd(const char *str, uint8_t length)
 	{
 		beginCommand(I2C_FLEXEL_COMMAND_PRINT_STRING_ON_LCD);
 		sendCommandParameter(length);
-		sendCommandParameters(str, length);
+		sendCommandParameters( (byte*) str, length);
 		endCommand();
 	}
 
-	void I2CFlexel::loadLcdCustomCharacters(byte addr, byte* bitmap)
+	void I2CFlexel::loadLcdCustomCharacters(byte addr, byte *bitmap)
 	{
 		beginCommand(I2C_FLEXEL_COMMAND_LOAD_LCD_CUSTOM_CHARACTERS);
 		sendCommandParameter(addr);
