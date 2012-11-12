@@ -62,12 +62,12 @@ namespace I2CFlexel
 	/**
 	 * Enumerations
 	 */
-	enum HighPowerPin {HIGHPOWER1 = 1, HIGHPOWER2 = 2, HIGHPOWER3 = 3, HIGHPOWER4 = 4};
-	enum ServoPin {SERVO1 = 1, SERVO2 = 2, SERVO3 = 3, SERVO4 = 4};
+	enum HighPowerPin {HIGHPOWER1 = 0x01, HIGHPOWER2 = 0x02, HIGHPOWER3 = 0x03, HIGHPOWER4 = 0x04};
+	enum ServoPin {SERVO1 = 0x01, SERVO2 = 0x02, SERVO3 = 0x03, SERVO4 = 0x04};
 	enum DcMotor {MOTOR1 = 0x00, MOTOR2 = 0x01};
 	enum MotorDirection {FORWARD = 0x00, REVERSE = 0x01};
-	enum AnalogInputPin {INPUT1 = 1, INPUT2 = 2, INPUT3 = 3, INPUT4 = 4};
-	enum KeypadMode {KEYPAD_4X4 = 0, KEYPAD_8 = 1, KEYPAD_PS2 = 2};
+	enum AnalogInputPin {INPUT1 = 0x01, INPUT2 = 0x02, INPUT3 = 0x03, INPUT4 = 0x04};
+	enum KeypadMode {KEYPAD_4X4 = 0x00, KEYPAD_8 = 0x01, KEYPAD_PS2 = 0x02};
 
 	/**
 	 * Structure to hold date and time values
