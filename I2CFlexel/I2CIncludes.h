@@ -52,6 +52,7 @@
 
 // Helper constants
 #define I2C_FLEXEL_READ_KEY_BASE I2C_FLEXEL_COMMAND_READ_KEYPAD;
+#define I2C_FLEXEL_BUZZER_MS_PER_COUNT 0x05
 #define I2C_FLEXEL_LCD_MAX_ROWS_COUNT 4
 #define I2C_FLEXEL_LCD_MAX_COLS_COUNT 20
 #define I2C_FLEXEL_LCD_CHAR_ROWS_COUNT 8
@@ -67,11 +68,6 @@ namespace I2CFlexel
 	enum MotorDirection {FORWARD = 0x00, REVERSE = 0x01};
 	enum AnalogInputPin {INPUT1 = 1, INPUT2 = 2, INPUT3 = 3, INPUT4 = 4};
 	enum KeypadMode {KEYPAD_4X4 = 0, KEYPAD_8 = 1, KEYPAD_PS2 = 2};
-
-	/**
-	 * Buzzer ms per counts conversion rate
-	 */
-	const byte buzzerMsPerCount = 5;
 
 	/**
 	 * Structure to hold date and time values

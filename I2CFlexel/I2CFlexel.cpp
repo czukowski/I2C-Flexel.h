@@ -251,7 +251,7 @@ namespace I2CFlexel
 
 	void I2CFlexel::setBuzzerTime(uint16_t ms)
 	{
-		byte count = (byte) (ms / buzzerMsPerCount);
+		byte count = (byte) (ms / I2C_FLEXEL_BUZZER_MS_PER_COUNT);
 		setBuzzerTime(count);
 	}
 	void I2CFlexel::setBuzzerTime(byte count)
