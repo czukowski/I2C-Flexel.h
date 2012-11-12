@@ -18,14 +18,19 @@ namespace I2CFlexel
 	class I2CFlexelSuite : virtual public TestSuite
 	{
 		public:
-			MockWire wire;
-			I2CFlexel object;
+			MockWire* wire;
+			I2CFlexel* object;
 			I2CFlexelSuite() : TestSuite("I2C Flexel tests") {}
 			void setUp()
 			{
-				wire = MockWire();
-				object = I2CFlexel();
-				object.setWire(wire);
+				this->wire = new MockWire();
+				this->object = new I2CFlexel();
+				this->object->setWire(*this->wire);
+			}
+			void tearDown()
+			{
+				free(this->object);
+				free(this->wire);
 			}
 	};
 }
