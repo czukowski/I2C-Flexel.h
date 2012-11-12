@@ -26,7 +26,9 @@ I2CFlexelSuite i2cFlexelSuite;
 // Test set output pins and motor commands
 //#include "OutputTest.h"
 // Test keypad commands
-#include "KeypadTest.h"
+//#include "KeypadTest.h"
+// Test LCD commands
+#include "LCDTest.h"
 
 int main(int argc, const char* argv[])
 {
