@@ -21,4 +21,4 @@ Since it's come to my attention that the original website is now not working, I'
 documentation and example files here, to the `Docs` subfolder, in order to preserve the knowledge. Hope the author
 wouldn't mind.
 
-There is still a copy of the original website in the [Wayback Machine](http://web.archive.org)!
+There is still a copy of the original website in the [Wayback Machine](http://web.archive.org) (if you consider yourself lucky finding the documentation you needed there, know that the service is accepting [donations](https://archive.org/donate/))!
